@@ -28,7 +28,8 @@ public class ConsumerController {
         //这里是直接将访问地址写死了
 //        String url="http://localhost:9091/user/"+id;
 
-        //user-service是服务名 可以直接通过服务名访问
+        //在spring-cloud-common包中自带了ribbon 所以即使user-service是服务名 也
+        // 可以直接通过服务名访问
         String url="http://user-service/user/"+id;
         return restTemplate.getForObject(url,User.class);
     }
