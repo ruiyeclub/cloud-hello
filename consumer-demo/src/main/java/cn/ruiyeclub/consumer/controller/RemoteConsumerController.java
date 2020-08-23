@@ -1,7 +1,7 @@
 package cn.ruiyeclub.consumer.controller;
 
 import cn.ruiyeclub.consumer.entity.User;
-import cn.ruiyeclub.consumer.feign.FeignUserService;
+import cn.ruiyeclub.consumer.feign.RemoteUserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,13 +15,13 @@ import javax.annotation.Resource;
  */
 @RestController
 @RequestMapping("/cf")
-public class FeignConsumerController {
+public class RemoteConsumerController {
 
     @Resource
-    private FeignUserService feignUserService;
+    private RemoteUserService remoteUserService;
 
     @GetMapping("/{id}")
     public User queryById(@PathVariable Long id){
-        return feignUserService.queryById(id);
+        return remoteUserService.queryById(id);
     }
 }

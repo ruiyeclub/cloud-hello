@@ -7,3 +7,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:10086/eureka
+
+feign:
+  hystrix:
+    enabled: true # 开启Feign的熔断功能 默认是关闭的
+
+# 日志级别的配置
+logging:
+  level:
+    cn.ruiyeclub: debug
