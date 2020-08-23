@@ -1,7 +1,7 @@
 package cn.ruiyeclub.consumer.controller;
 
-import cn.ruiyeclub.api.entity.User;
-import cn.ruiyeclub.api.feign.RemoteUserService;
+import cn.ruiyeclub.user.entity.User;
+import cn.ruiyeclub.user.feign.RemoteUserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

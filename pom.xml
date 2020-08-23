@@ -12,7 +12,8 @@
         <module>user-service</module>
         <module>consumer-demo</module>
         <module>eureka-server</module>
-        <module>cloud-api</module>
+        <module>cloud-service-api</module>
+        <module>cloud-gateway</module>
     </modules>
 
     <parent>

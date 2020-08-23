@@ -1,4 +1,4 @@
-package cn.ruiyeclub.api.entity;
+package cn.ruiyeclub.user.entity;
 
 import lombok.Data;
 

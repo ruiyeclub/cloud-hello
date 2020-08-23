@@ -37,7 +37,7 @@
         <!--系统模块-->
         <dependency>
             <groupId>cn.ruiyeclub</groupId>
-            <artifactId>cloud-api</artifactId>
+            <artifactId>cloud-service-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 //@EnableCircuitBreaker //开启熔断
 
 @SpringCloudApplication //这个注解就包括上面三个
-@EnableFeignClients(basePackages = {"cn.ruiyeclub.api.feign"}) //开启Feign并扫描Feign客户端
+@EnableFeignClients(basePackages = {"cn.ruiyeclub.user.feign"}) //开启Feign并扫描Feign客户端
 @ComponentScan(basePackages = {"cn.ruiyeclub"})
 public class ConsumerApplication {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package cn.ruiyeclub.api.feign.fallback;
+package cn.ruiyeclub.user.feign.fallback;
 
-import cn.ruiyeclub.api.entity.User;
-import cn.ruiyeclub.api.feign.RemoteUserService;
+import cn.ruiyeclub.user.entity.User;
+import cn.ruiyeclub.user.feign.RemoteUserService;
 import org.springframework.stereotype.Component;
 
 /**

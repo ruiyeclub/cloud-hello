@@ -1,8 +1,8 @@
-package cn.ruiyeclub.api.feign;
+package cn.ruiyeclub.user.feign;
 
-import cn.ruiyeclub.api.config.FeignConfig;
-import cn.ruiyeclub.api.entity.User;
-import cn.ruiyeclub.api.feign.fallback.RemoteUserFallback;
+import cn.ruiyeclub.user.config.FeignConfig;
+import cn.ruiyeclub.user.entity.User;
+import cn.ruiyeclub.user.feign.fallback.RemoteUserFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +17,7 @@ public interface RemoteUserService {
 
     /**
      * eg:http://user-service/user/1
+     * 路径不能写错
      * @param id
      * @return
      */
