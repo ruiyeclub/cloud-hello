@@ -1,13 +1,11 @@
 package cn.ruiyeclub.consumer;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -19,7 +17,8 @@ import org.springframework.web.client.RestTemplate;
 //@EnableCircuitBreaker //开启熔断
 
 @SpringCloudApplication //这个注解就包括上面三个
-@EnableFeignClients //开启Feign功能
+@EnableFeignClients(basePackages = {"cn.ruiyeclub.api.feign"}) //开启Feign并扫描Feign客户端
+@ComponentScan(basePackages = {"cn.ruiyeclub"})
 public class ConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConsumerApplication.class,args);

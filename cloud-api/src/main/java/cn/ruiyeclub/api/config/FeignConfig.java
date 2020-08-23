@@ -1,4 +1,4 @@
-package cn.ruiyeclub.consumer.config;
+package cn.ruiyeclub.api.config;
 
 import feign.Logger;
 import org.springframework.context.annotation.Bean;
