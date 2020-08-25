@@ -8,8 +8,10 @@ spring:
     gateway:
       routes:
         # 路由id，可以任意个数
-        - id: user-service-route
-          uri: http://127.0.0.1:9091
+        - id: user-service
+          # uri: http://127.0.0.1:9091（这种方式灵活性不好）
+          # gateway使用LoadBalancerClient把user-service通过Eureka解析成实际的路径和端口，并进行Ribbon负载均衡
+          uri: lb://user-service
           # 路由断言：可以匹配映射路径(请求路径中包含/user的全部转到9091端口即user-service)
           predicates:
             - Path=/user/** # 注意Path是大写
@@ -17,6 +19,6 @@ spring:
 eureka:
   client:
     service-url:
-      defaulZone: http://127.0.0.1:10086/eureka
+      defaultZone: http://127.0.0.1:10086/eureka
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: true # 以IP地址注册到服务中心，相互注册使用IP地址
