@@ -15,7 +15,7 @@ spring:
           # 路由断言：可以匹配映射路径(请求路径中包含/user的全部转到9091端口即user-service)
           predicates:
             - Path=/user/** # 注意Path是大写
-      # 默认过滤器，对所有路由都生效
+      # 默认过滤器，对所有路由都生效 可以添加多个
       default-filters:
         - AddResponseHeader=X-Response-Foo, Bar
 eureka:
