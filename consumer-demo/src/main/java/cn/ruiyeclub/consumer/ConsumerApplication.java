@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringCloudApplication //这个注解就包括上面三个
 @EnableFeignClients(basePackages = {"cn.ruiyeclub.user.feign"}) //开启Feign并扫描Feign客户端
-@ComponentScan(basePackages = {"cn.ruiyeclub"})
+@ComponentScan(basePackages = {"cn.ruiyeclub.user"})
 public class ConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConsumerApplication.class,args);
