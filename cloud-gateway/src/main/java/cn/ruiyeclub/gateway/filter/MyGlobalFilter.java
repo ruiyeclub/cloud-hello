@@ -19,6 +19,7 @@ import java.util.List;
 @Component
 @Slf4j
 public class MyGlobalFilter implements GlobalFilter, Ordered {
+
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         log.info("----------全局过滤器MyGlobalFilter----------");
