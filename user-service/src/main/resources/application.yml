@@ -1,18 +1,24 @@
 server:
   port: 9091
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cloud_hello?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-    username: root
-    password: admin
 
+spring:
   application:
     name: user-service
+  profiles:
+    active: dev
+
+  # 读取config
+  cloud:
+    config:
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      discovery:
+        enabled: true
+        service-id: cloud-config
+
 # 注册到Eureka
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:10086/eureka
-mybatis:
-  type-aliases-package: cn.ruiyeclub.user.entity
