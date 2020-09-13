@@ -10,7 +10,7 @@ spring:
   # 读取config
   cloud:
     config:
-      fail-fast: true
+      fail-fast: true # 设置客户端优先判断config获取是否正常
       name: ${spring.application.name}
       profile: ${spring.profiles.active}
       discovery:
@@ -22,3 +22,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:10086/eureka
+
+mybatis:
+  type-aliases-package: cn.ruiyeclub.user.entity
