@@ -22,6 +22,12 @@ spring:
       discovery:
         enabled: true
         service-id: cloud-config
+  # 配置rabbitmq信息；如果是都与默认值一致则不需要配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 # 注册到Eureka
 eureka:
